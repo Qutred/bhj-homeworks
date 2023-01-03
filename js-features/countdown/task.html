@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="task.css">
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <title>Таймер обратного отсчёта</title>
 </head>
+
 <body>
     <header class="header">
         <div class="logo__container">
-          <a href="https://netology.ru/" class="logo__link"></a>
+            <a href="https://netology.ru/" class="logo__link"></a>
         </div>
         <h1 class="header__title">
             Домашнее задание к занятию 1.1 «Возможности JavaScript в браузере». Таймер обратного отсчёта
@@ -21,10 +23,16 @@
     <main class="content">
         <div class="card">
             <div id="status">
-                До окончания конкурса осталось секунд: <span id="timer">59</span>
+                До окончания конкурса осталось:
+                <div id="timer">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
             </div>
+            <a hidden id="download-link" href="winner.jpg" download="winner.jpg" target="_blank">Download
+                link</a>
         </div>
-    </main>    
+    </main>
     <script src="task.js"></script>
 </body>
+
 </html>
