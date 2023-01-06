@@ -14,11 +14,11 @@ body {
   background: white;
 }
 
-.book_fs-big {
+.book_font-size-big {
   font-size: 20px;
 }
 
-.book_fs-small {
+.book_font-size-small {
   font-size: 12px;
 }
 
@@ -34,15 +34,15 @@ body {
   color: whitesmoke;
 }
 
-.book_bg-gray {
+.book_bg-color-gray {
   background: grey;
 }
 
-.book_bg-black {
+.book_bg-color-black {
   background: black;
 }
 
-.book_bg-white {
+.book_bg-color-white {
   background: white;
 }
 
@@ -54,7 +54,7 @@ body {
   justify-content: space-around;
   align-items: center;
   color: whitesmoke;
-  font-size: 16px;;
+  font-size: 16px;
 }
 
 .book__control {
@@ -72,7 +72,8 @@ body {
   box-sizing: border-box;
 }
 
-.color_active {
+.color_active,
+.bg-color_active {
   box-shadow: 0 0 5px white;
   border: 1px solid gray;
 }
