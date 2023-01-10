@@ -26,6 +26,19 @@ body {
   height: 100px;
   object-fit: contain;
 }
+
+.cart__remove-item {
+  position: absolute;
+  background: none;
+  color: black;
+  font-weight: 700;
+}
+
+.cart__remove-item:hover {
+  background: none;
+  color: red;
+}
+
 .product {
   display: flex;
   flex-wrap: wrap;
