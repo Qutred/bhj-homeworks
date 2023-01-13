@@ -20,16 +20,14 @@ class SigIn {
     this.logoutBtn.addEventListener('click', this.logOut);
 
     if ((this.userId = this.getId())) {
-      this.hideSignInForm();
-      this.showLogOutBtn();
-      this.updateWelcomeUserId(this.userId);
-      this.showWelcome();
-      this.welcome.querySelector('#user_id').innerText = this.userId;
+      this.showUnauthorizedView();
     }
   }
 
-  updateWelcomeUserId(userId) {
-    this.welcome.querySelector('#user_id').innerText = userId;
+  showUnauthorizedView() {
+    this.hideSignInForm();
+    this.showLogOutBtn();
+    this.showWelcome();
   }
 
   showSignInForm() {
@@ -75,7 +73,6 @@ class SigIn {
     xhr.addEventListener('loadend', e => {
       if (xhr.status === 201 && xhr.response.success) {
         this.saveId(xhr.response.user_id);
-        this.updateWelcomeUserId(this.userId);
         this.showWelcome();
       } else if (xhr.status === 201 && !xhr.response.success) {
         this.showTostMessage('Неверний логин или пароль');
@@ -109,6 +106,7 @@ class SigIn {
   }
 
   showWelcome() {
+    this.welcome.querySelector('#user_id').innerText = this.userId;
     this.welcome.classList.add('welcome_active');
   }
 
